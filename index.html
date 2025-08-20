@@ -251,7 +251,36 @@
     </p>
   </section>
 
-  <!-- Call to Action -->
+  <!-- Consultation Contact Form -->
+<section class="section">
+  <h2>Book a Consultation</h2>
+  <p class="text-center">Complete the form below and we’ll respond within 24 hours.</p>
+
+  <form action="https://formspree.io/f/yourformid" method="POST" style="max-width:600px; margin:0 auto; background:white; padding:30px; border:2px solid #B76E79; border-radius:18px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+    
+    <label for="name" style="font-weight:600;">Full Name</label><br>
+    <input type="text" id="name" name="name" required style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"><br>
+    
+    <label for="email" style="font-weight:600;">Email Address</label><br>
+    <input type="email" id="email" name="_replyto" required style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"><br>
+    
+    <label for="service" style="font-weight:600;">Service Requested</label><br>
+    <select id="service" name="service" required style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;">
+      <option value="consulting">Whitney’s Way Consulting</option>
+      <option value="notary">The Polished Pen Notary Services</option>
+      <option value="other">Other</option>
+    </select><br>
+    
+    <label for="message" style="font-weight:600;">Message</label><br>
+    <textarea id="message" name="message" rows="5" style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"></textarea><br>
+    
+    <button type="submit" style="background-color:#B76E79; color:white; padding:14px 28px; border:none; border-radius:30px; font-size:16px; font-weight:600; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      📅 Submit Request
+    </button>
+  </form>
+</section>
+
+<!-- Call to Action -->
   <section class="section cta">
     <div class="card" style="display:inline-block; padding:32px 36px;">
       <h3>Ready to book?</h3>
