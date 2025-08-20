@@ -14,8 +14,6 @@
     --champagne:#F7EDE2;
     --rosegold:#B76E79;
     --ink:#3B3B3B;
-    --line:rgba(183,110,121,0.35);
-    --panel:#FFFFFF;
   }
   html{box-sizing:border-box;scroll-behavior:smooth}
   *,*:before,*:after{box-sizing:inherit}
@@ -33,11 +31,6 @@
     border-radius:22px; padding:28px;
     box-shadow:0 10px 28px rgba(0,0,0,.06);
   }
-  .soft-panel{
-    background:linear-gradient(180deg, var(--champagne) 0%, #fff 100%);
-    border:1px solid rgba(0,0,0,.06); border-radius:24px;
-    box-shadow:0 10px 28px rgba(0,0,0,.06);
-  }
 
   /* Header */
   header{
@@ -45,7 +38,8 @@
     border-bottom:1px solid rgba(0,0,0,.06);
   }
   header .logo{
-    width:190px; max-width:70vw; height:auto; display:block; margin:0 auto 18px;
+    width:220px; /* tweak to 240px if you want it a touch larger */
+    max-width:70vw; height:auto; display:block; margin:0 auto 18px;
   }
   .divider{
     width:28%; max-width:220px; height:0; border:none;
@@ -74,20 +68,25 @@
   /* Tables */
   .table-wrap{overflow-x:auto; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.05)}
   table{
-    width:100%; border-collapse:separate; border-spacing:0; background:#fff;
+    width:100%; border-collapse:collapse; background:#fff;
     border:1px solid rgba(0,0,0,.06);
   }
   thead th{
-    background:#FDF5E6; color:var(--rosegold);
+    background:#B76E79; color:#fff;
     font-family:"Playfair Display", serif; font-weight:600; font-size:16px;
-    padding:14px 16px; text-align:left; border-bottom:2px solid var(--rosegold);
+    padding:12px 16px; text-align:left;
   }
   tbody td{
     padding:12px 16px; color:#444; border-bottom:1px solid rgba(183,110,121,.22);
   }
-  tbody tr:nth-child(2n){background:#FAF9F6}
+  tbody tr:nth-child(2n){background:#F7EDE2}
+  tbody tr:nth-child(2n+1){background:#FFFFFF}
   tbody tr:last-child td{border-bottom:none}
-  .note{font-size:13px; color:#6A6A6A; margin-top:8px}
+
+  /* Notes under tables - bold */
+  .note{
+    font-size:13px; color:var(--ink); margin-top:8px; font-weight:700;
+  }
 
   /* Buttons */
   .btn{
@@ -151,136 +150,136 @@
     </div>
   </section>
 
-  <!-- Pricing -->
+  <!-- Notary Pricing -->
   <section class="section">
     <h2>Pricing</h2>
 
     <div class="table-wrap" style="border:2px solid #B76E79; border-radius:18px; overflow:hidden;">
-      <table style="width:100%; border-collapse:collapse;">
-        <thead style="background-color:#B76E79; color:white;">
+      <table>
+        <thead>
           <tr>
-            <th style="padding:12px; text-align:left;">Service</th>
-            <th style="padding:12px; text-align:left;">Details</th>
-            <th style="padding:12px; text-align:left;">Price</th>
+            <th>Service</th>
+            <th>Details</th>
+            <th>Price</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="background-color:#FFFFFF;">
-            <td class="font-medium" style="padding:12px;">General Notarization</td>
-            <td style="padding:12px;">Standard notarization per signature</td>
-            <td style="padding:12px;">$10 / signature</td>
+          <tr>
+            <td class="font-medium">General Notarization</td>
+            <td>Standard notarization per signature</td>
+            <td>$10 / signature</td>
           </tr>
-          <tr style="background-color:#F7EDE2;">
-            <td class="font-medium" style="padding:12px;">Loan Signing Package</td>
-            <td style="padding:12px;">Buyer, Seller, Refinance, HELOC</td>
-            <td style="padding:12px;">$150+</td>
+          <tr>
+            <td class="font-medium">Loan Signing Package</td>
+            <td>Buyer, Seller, Refinance, HELOC</td>
+            <td>$150+</td>
           </tr>
-          <tr style="background-color:#FFFFFF;">
-            <td class="font-medium" style="padding:12px;">Travel Fee</td>
-            <td style="padding:12px;">Within 15 miles of Seguin, TX <br><em>Additional fee applies beyond 15 miles</em></td>
-            <td style="padding:12px;">$25 +</td>
+          <tr>
+            <td class="font-medium">Travel Fee</td>
+            <td>Within 15 miles of Seguin, TX <br><em>Additional fee applies beyond 15 miles</em></td>
+            <td>$25 +</td>
           </tr>
-          <tr style="background-color:#F7EDE2;">
-            <td class="font-medium" style="padding:12px;">After-Hours / Weekend</td>
-            <td style="padding:12px;">By appointment only</td>
-            <td style="padding:12px;">+ $50 surcharge</td>
+          <tr>
+            <td class="font-medium">After-Hours / Weekend</td>
+            <td>By appointment only</td>
+            <td>+ $50 surcharge</td>
           </tr>
-          <tr style="background-color:#FFFFFF;">
-            <td class="font-medium" style="padding:12px;">Consulting Packages</td>
-            <td style="padding:12px;">Nonprofit & business startup packages</td>
-            <td style="padding:12px;">Starting at $350</td>
+          <tr>
+            <td class="font-medium">Consulting Packages</td>
+            <td>Nonprofit & business startup packages</td>
+            <td>Starting at $350</td>
           </tr>
         </tbody>
       </table>
     </div>
     <p class="note">
       Custom quotes available for complex signings and established organizations.  
-      <br><span style="color:#B76E79; font-weight:600;">Travel Policy:</span> $25 covers up to 15 miles from Seguin, TX. Each additional mile is billed at <strong>$1.00 per mile</strong>.
+      <br><span style="color:#B76E79;">Travel Policy:</span> $25 covers up to 15 miles from Seguin, TX. Each additional mile is billed at <strong>$1.00 per mile</strong>.
+      <br><span style="color:#B76E79;">After‑Hours & Weekend:</span> These appointments can’t be booked using the link. Please send <strong>an email</strong> to <strong>notary@polishedpennotary.com</strong>.
     </p>
   </section>
-    <!-- Consulting Packages -->
+
+  <!-- Consulting Packages -->
   <section class="section">
     <h2>Whitney’s Way Consulting Packages</h2>
 
     <div class="table-wrap" style="border:2px solid #B76E79; border-radius:18px; overflow:hidden;">
-      <table style="width:100%; border-collapse:collapse;">
-        <thead style="background-color:#B76E79; color:white;">
+      <table>
+        <thead>
           <tr>
-            <th style="padding:12px; text-align:left;">Package</th>
-            <th style="padding:12px; text-align:left;">Includes</th>
-            <th style="padding:12px; text-align:left;">Price</th>
+            <th>Package</th>
+            <th>Includes</th>
+            <th>Price</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="background-color:#FFFFFF;">
-            <td class="font-medium" style="padding:12px;">Starter Nonprofit Kit</td>
-            <td style="padding:12px;">
-              EIN setup, Articles of Incorporation, Bylaws template, initial consultation
-            </td>
-            <td style="padding:12px;">$350</td>
+          <tr>
+            <td class="font-medium">Starter Nonprofit Kit</td>
+            <td>EIN setup, Articles of Incorporation, Bylaws template, initial consultation</td>
+            <td>$350</td>
           </tr>
-          <tr style="background-color:#F7EDE2;">
-            <td class="font-medium" style="padding:12px;">Growth Package</td>
-            <td style="padding:12px;">
-              Everything in Starter Kit + 1023-EZ IRS filing guidance, board training resources
-            </td>
-            <td style="padding:12px;">$650</td>
+          <tr>
+            <td class="font-medium">Growth Package</td>
+            <td>Everything in Starter Kit + 1023-EZ IRS filing guidance, board training resources</td>
+            <td>$650</td>
           </tr>
-          <tr style="background-color:#FFFFFF;">
-            <td class="font-medium" style="padding:12px;">Full-Service Incorporation</td>
-            <td style="padding:12px;">
-              Growth Package + 1023 full filing support, policies & procedures, fundraising strategy
-            </td>
-            <td style="padding:12px;">$1,500</td>
+          <tr>
+            <td class="font-medium">Full-Service Incorporation</td>
+            <td>Growth Package + 1023 full filing support, policies & procedures, fundraising strategy</td>
+            <td>$1,500</td>
           </tr>
-          <tr style="background-color:#F7EDE2;">
-            <td class="font-medium" style="padding:12px;">Consulting Hourly</td>
-            <td style="padding:12px;">
-              One-on-one strategic consulting for nonprofits or small businesses
-            </td>
-            <td style="padding:12px;">$75/hr</td>
+          <tr>
+            <td class="font-medium">Consulting Hourly</td>
+            <td>One-on-one strategic consulting for nonprofits or small businesses</td>
+            <td>$75/hr</td>
           </tr>
         </tbody>
       </table>
     </div>
     <p class="note">
       Packages can be customized based on organizational needs.  
-      After Hours and Weekend Appointments can't be booked using the link. Please send a email to notary@polishedpennotary.com
-      
-      <br><span style="color:#B76E79; font-weight:600;">Consulting Policy:</span> A 50% deposit is required to begin services. Balance due upon delivery of completed package. IRS Filing Fees and Domain Purchase are not Included
+      <br><span style="color:#B76E79;">Consulting Policy:</span> A 50% deposit is required to begin services. Balance due upon delivery of completed package. IRS filing fees and domain purchase are not included.
     </p>
   </section>
 
   <!-- Consultation Contact Form -->
-<section class="section">
-  <h2>Book a Consultation</h2>
-  <p class="text-center">Complete the form below and we’ll respond within 24 hours.</p>
+  <section class="section text-center">
+    <h2>Book a Consultation</h2>
+    <p style="max-width:600px; margin:0 auto 20px; font-size:16px; color:#444;">
+      Complete the form below and we’ll respond within 24 hours.
+    </p>
 
-  <form action="https://formspree.io/f/mqalvwlq" method="POST" style="max-width:600px; margin:0 auto; background:white; padding:30px; border:2px solid #B76E79; border-radius:18px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-    
-    <label for="name" style="font-weight:600;">Full Name</label><br>
-    <input type="text" id="name" name="name" required style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"><br>
-    
-    <label for="email" style="font-weight:600;">Email Address</label><br>
-    <input type="email" id="email" name="_replyto" required style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"><br>
-    
-    <label for="service" style="font-weight:600;">Service Requested</label><br>
-    <select id="service" name="service" required style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;">
-      <option value="consulting">Whitney’s Way Consulting</option>
-      <option value="notary">The Polished Pen Notary Services</option>
-      <option value="other">Other</option>
-    </select><br>
-    
-    <label for="message" style="font-weight:600;">Message</label><br>
-    <textarea id="message" name="message" rows="5" style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"></textarea><br>
-    
-    <button type="submit" style="background-color:#B76E79; color:white; padding:14px 28px; border:none; border-radius:30px; font-size:16px; font-weight:600; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-      📅 Submit Request
-    </button>
-  </form>
-</section>
+    <form action="https://formspree.io/f/mqalvwlq" method="POST"
+          style="max-width:600px; margin:0 auto; background:white; padding:30px;
+                 border:2px solid #B76E79; border-radius:18px; box-shadow:0 4px 8px rgba(0,0,0,0.05); text-align:left;">
+      <label for="name" style="font-weight:600;">Full Name</label><br>
+      <input type="text" id="name" name="name" required
+             style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"><br>
 
-<!-- Call to Action -->
+      <label for="email" style="font-weight:600;">Email Address</label><br>
+      <input type="email" id="email" name="_replyto" required
+             style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"><br>
+
+      <label for="service" style="font-weight:600;">Service Requested</label><br>
+      <select id="service" name="service" required
+              style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;">
+        <option value="consulting">Whitney’s Way Consulting</option>
+        <option value="notary">The Polished Pen Notary Services</option>
+        <option value="other">Other</option>
+      </select><br>
+
+      <label for="message" style="font-weight:600;">Message</label><br>
+      <textarea id="message" name="message" rows="5"
+                style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:8px;"></textarea><br>
+
+      <button type="submit"
+              style="background-color:#B76E79; color:white; padding:14px 28px; border:none; border-radius:30px; font-size:16px; font-weight:600; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        📅 Submit Request
+      </button>
+    </form>
+  </section>
+
+  <!-- CTA -->
   <section class="section cta">
     <div class="card" style="display:inline-block; padding:32px 36px;">
       <h3>Ready to book?</h3>
@@ -288,12 +287,10 @@
         Schedule a polished mobile notary visit or a consulting session — we’ll confirm quickly.
       </p>
 
-      <!-- Primary action: Calendly link wired -->
       <a href="https://calendly.com/whitneyajenkins/30min" target="_blank" rel="noopener" class="btn btn-primary" style="margin-right:10px;">
         Book Now
       </a>
 
-      <!-- Secondary action: email fallback -->
       <a href="mailto:signings@polishedpen.com?subject=Booking%20Request%20-%20The%20Polished%20Pen"
          class="btn btn-outline">
         Email Us Instead
