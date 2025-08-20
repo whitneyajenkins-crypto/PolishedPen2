@@ -1,211 +1,178 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Whitney’s Way Consulting & The Polished Pen Notary Services</title>
+<header class="text-center py-10 bg-white">
+  <img src="logo.png" alt="Whitney's Way Consulting & The Polished Pen Notary Services" class="mx-auto w-64 mb-6">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <h1 class="text-4xl font-serif text-[#b76e79] tracking-wide">Whitney's Way Consulting</h1>
+  <hr class="my-6 border-t-2 border-[#b76e79] w-1/3 mx-auto">
+  <h2 class="text-3xl italic font-serif text-[#b76e79]">The Polished Pen</h2>
+  <p class="text-lg font-light text-gray-600 tracking-wide">Notary Services</p>
+</header>
+<!-- Luxury fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            rosegold: '#B76E79',
-            ivory: '#FAF9F6',
-            champagne: '#F7EDE2',
-            charcoal: '#2F2F2F'
-          },
-          fontFamily: {
-            script: ['Alex Brush', 'cursive'],
-            sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
-            serif: ['Playfair Display', 'ui-serif', 'Georgia']
-          },
-          boxShadow: {
-            soft: '0 8px 24px rgba(0,0,0,0.06)'
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    html{scroll-behavior:smooth}
-    .btn{ @apply inline-flex items-center justify-center px-5 py-3 rounded-2xl font-semibold transition; }
-    .btn-primary{ @apply bg-rosegold text-white hover:opacity-95; }
-    .btn-outline{ @apply border border-rosegold text-rosegold hover:bg-rosegold/5; }
-    .container-ww{ @apply max-w-screen-md mx-auto px-6; }
-    .section{ @apply container-ww py-12 sm:py-16; }
-    .card{ @apply rounded-3xl bg-white shadow-soft border border-black/5 p-6 sm:p-8; }
-    .divider{ @apply h-px w-full bg-rosegold/30 my-12 sm:my-16; }
-  </style>
+<style>
+  :root{
+    --ivory:#FAF9F6;
+    --champagne:#F7EDE2;
+    --rosegold:#B76E79;   /* tweak here if your brand hex is different */
+    --ink:#3B3B3B;
+    --line:rgba(183,110,121,0.35);
+    --panel:#FFFFFF;
+  }
+  html{box-sizing:border-box;scroll-behavior:smooth}
+  *,*:before,*:after{box-sizing:inherit}
+  body{margin:0;background:var(--ivory);color:var(--ink);font-family:Montserrat,system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:20px}
+  .header{position:sticky;top:0;z-index:50;background:rgba(250,249,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
+  .head-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;font-weight:600;text-decoration:none;transition:opacity .2s ease}
+  .btn-primary{background:var(--rosegold);color:#fff;border:1px solid var(--rosegold)} .btn-primary:hover{opacity:.92}
+  .btn-ghost{border:1px solid var(--rosegold);color:var(--rosegold);background:transparent} .btn-ghost:hover{background:rgba(183,110,121,.06)}
+  .hero{margin-top:20px;border:1px solid rgba(0,0,0,.06);background:linear-gradient(180deg,var(--champagne) 0%,#fff 100%);border-radius:24px;padding:28px 22px;box-shadow:0 10px 28px rgba(0,0,0,.06);text-align:center}
+  .logo{max-width:540px;width:92%;height:auto;display:block;margin:0 auto 14px}
+  h1{font-family:"Playfair Display",serif;margin:8px 0 0;font-size:28px;line-height:1.25}
+  .script{font-family:"Alex Brush",cursive;color:var(--rosegold);font-size:34px;line-height:1}
+  .lead{color:#555;margin:10px auto 18px;max-width:720px}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .divider{height:1px;background:var(--line);margin:34px 0}
+  .dual{display:grid;grid-template-columns:1fr;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--panel);box-shadow:0 10px 28px rgba(0,0,0,.06)}
+  .pane{padding:26px 22px}
+  .pane + .pane{border-top:1px solid var(--line)}
+  .pane h2{margin:0 0 6px;font-family:"Playfair Display",serif;font-size:22px}
+  .pane small{display:block;color:#7A7A7A}
+  .pane ul{margin:16px 0 0 18px;line-height:1.7}
+  .pane .actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+  .section{margin:34px 0}
+  .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:20px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+  .section h3{font-family:"Playfair Display",serif;font-size:22px;margin:0 0 12px}
+  table{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px;font-size:15px}
+  th,td{padding:12px 14px;text-align:left}
+  thead th{font-family:"Playfair Display",serif;font-weight:600;border-bottom:2px solid var(--rosegold)}
+  tbody td{border-bottom:1px solid rgba(183,110,121,.25)} tbody tr:last-child td{border-bottom:none}
+  .note{font-size:13px;color:#6A6A6A;margin-top:8px}
+  .grid{display:grid;gap:16px}
+  .input{width:100%;padding:12px 14px;border-radius:14px;border:1px solid rgba(0,0,0,.1);background:#fff;color:#222;font-size:15px}
+  textarea.input{min-height:120px}
+  .footer{margin:40px 0 20px;text-align:center;color:#888;font-size:12px}
+  @media(min-width:840px){
+    .hero{padding:40px 36px}
+    h1{font-size:36px}
+    .script{font-size:42px}
+    .dual{grid-template-columns:1fr 1fr}
+    .pane + .pane{border-top:none;border-left:1px solid var(--line)}
+    .pane{padding:32px}
+  }
+</style>
 </head>
+<body>
 
-<body class="bg-ivory text-charcoal font-sans">
+<!-- Header (logo image on the left; button on the right) -->
+<div class="header">
+  <div class="wrap head-row">
+    <img src="logo.png" alt="Whitney’s Way Consulting & The Polished Pen Notary Services" style="height:46px;width:auto;display:block;">
+    <a href="#contact" class="btn btn-primary">Book Now</a>
+  </div>
+</div>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur border-b border-black/5">
-    <div class="container-ww py-4 flex items-center justify-between gap-3">
-      <div class="leading-tight">
-        <div class="text-[10px] tracking-[0.18em] text-charcoal/70">WHITNEY’S WAY CONSULTING</div>
-        <div class="text-xs text-charcoal/60">&</div>
-        <div class="text-sm font-semibold text-rosegold">The Polished Pen Notary Services</div>
-      </div>
-      <nav class="hidden sm:flex gap-6 text-sm text-charcoal/80">
-        <a href="#about" class="hover:text-rosegold">About</a>
-        <a href="#services" class="hover:text-rosegold">Services</a>
-        <a href="#pricing" class="hover:text-rosegold">Pricing</a>
-        <a href="#contact" class="hover:text-rosegold">Contact</a>
-      </nav>
-      <a href="#contact" class="btn btn-primary">Book Now</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="section">
-    <div class="rounded-3xl bg-champagne/50 p-8 sm:p-12 border border-black/5 shadow-soft">
-      <h1 class="font-serif text-3xl sm:text-4xl leading-tight">
-        <span class="block text-rosegold">Whitney’s Way Consulting</span>
-        <span class="block text-charcoal">& The <span class="font-script text-rosegold">Polished Pen</span> Notary Services</span>
-      </h1>
-      <p class="mt-4 text-base sm:text-lg text-charcoal/80">
-        Luxury mobile notary & nonprofit consulting—serving San Antonio, Seguin, and surrounding areas.
-      </p>
-      <div class="mt-7 flex flex-col sm:flex-row gap-3">
-        <a href="#notary" class="btn btn-primary w-full sm:w-auto">Book a Notary</a>
-        <a href="#consulting" class="btn btn-outline w-full sm:w-auto">Explore Consulting</a>
-      </div>
+<div class="wrap">
+  <!-- Hero (logo image + matching text below as live type) -->
+  <section class="hero">
+    <img src="logo.png" class="logo" alt="Whitney’s Way Consulting & The Polished Pen Notary Services logo">
+    <h1>Whitney’s Way Consulting <span style="color:#7a7a7a;font-weight:500">&</span>
+      <span class="script">The Polished Pen</span> Notary Services
+    </h1>
+    <p class="lead">Luxury service with flawless presentation — nonprofit consulting and mobile notary work across San Antonio, Seguin, and nearby areas.</p>
+    <div class="cta-row">
+      <a href="#notary" class="btn btn-primary">Book a Notary</a>
+      <a href="#consulting" class="btn btn-ghost">Explore Consulting</a>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="card">
-      <h2 class="text-2xl font-serif font-semibold text-rosegold">About</h2>
-      <p class="mt-4 text-charcoal/85 leading-relaxed">
-        I’m Whitney—Texas Notary Public & Loan Signing Agent and the founder of Whitney’s Way Consulting.
-        I deliver professional, on‑time notarizations and guide founders through nonprofit startup steps like
-        EIN filing and 501(c)(3) preparation. My focus is polished service, clear communication, and respect
-        for your time.
-      </p>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- Services -->
-  <section id="services" class="section">
-    <h2 class="text-2xl font-serif font-semibold text-rosegold mb-6">Services</h2>
-
-    <div class="grid grid-cols-1 gap-6">
-      <!-- Notary -->
-      <div id="notary" class="card">
-        <div class="flex items-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 24 24" class="text-rosegold" fill="currentColor" aria-hidden="true">
-            <path d="M12 2l4 4-6.5 6.5c-.3.3-.5.7-.6 1.1L8 18l3.9-.9c.4-.1.8-.3 1.1-.6L19 10l4 4-6 6c-.8.8-1.8 1.3-2.9 1.6l-6.7 1.7c-.6.2-1.2-.4-1.1-1.1l1.7-6.7c.3-1.1.8-2.1 1.6-2.9L12 2z"/>
-          </svg>
-          <h3 class="text-xl font-semibold">The <span class="font-script text-rosegold text-2xl align-middle">Polished Pen</span> Notary Services</h3>
-        </div>
-        <ul class="mt-4 list-disc pl-6 space-y-2 text-charcoal/85">
-          <li>Loan Signings (Purchase, Refinance, HELOC, Seller/Buyer)</li>
-          <li>General Notarizations (Wills, POA, Affidavits, School/Travel)</li>
-          <li>Mobile Notary — we come to you</li>
-        </ul>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#pricing" class="btn btn-primary">View Pricing</a>
-          <a href="#contact" class="btn btn-outline">Request Signing</a>
-        </div>
+  <!-- Dual brand panel (clear separation) -->
+  <section class="dual" id="services">
+    <div class="pane" id="consulting">
+      <h2>Whitney’s Way Consulting</h2>
+      <small>Nonprofit & small‑business advisory</small>
+      <ul>
+        <li>Nonprofit startup guidance</li>
+        <li>EIN filing & IRS 501(c)(3) preparation</li>
+        <li>Business formation & light ops coaching</li>
+      </ul>
+      <div class="actions">
+        <a href="#consulting-pricing" class="btn btn-primary">See Packages</a>
+        <a href="#contact" class="btn btn-ghost">Free Intro Chat</a>
       </div>
+    </div>
 
-      <!-- Consulting -->
-      <div id="consulting" class="card">
-        <div class="flex items-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 24 24" class="text-rosegold" fill="currentColor" aria-hidden="true">
-            <path d="M9 6V5a2 2 0 012-2h2a2 2 0 012 2v1h3a2 2 0 012 2v3H4V8a2 2 0 012-2h3zm2-1h2v1h-2V5z"/>
-            <path d="M4 11h16v7a2 2 0 01-2 2H6a2 2 0 01-2-2v-7zm6 3h4v2h-4v-2z"/>
-          </svg>
-          <h3 class="text-xl font-semibold">Whitney’s Way Consulting</h3>
-        </div>
-        <ul class="mt-4 list-disc pl-6 space-y-2 text-charcoal/85">
-          <li>Nonprofit Startup Guidance</li>
-          <li>EIN Filing & IRS 501(c)(3) Preparation</li>
-          <li>Business Formation & Light Ops Coaching</li>
-        </ul>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#pricing" class="btn btn-primary">See Packages</a>
-          <a href="#contact" class="btn btn-outline">Free Intro Chat</a>
-        </div>
+    <div class="pane" id="notary">
+      <h2><span class="script">The Polished Pen</span> Notary Services</h2>
+      <small>Mobile notary & loan signing</small>
+      <ul>
+        <li>Loan signings (Purchase, Refi, HELOC, Seller/Buyer)</li>
+        <li>General notarizations (Wills, POA, Affidavits, School/Travel)</li>
+        <li>Mobile notary — we come to you</li>
+      </ul>
+      <div class="actions">
+        <a href="#notary-pricing" class="btn btn-primary">View Pricing</a>
+        <a href="#contact" class="btn btn-ghost">Request Signing</a>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- Pricing -->
-  <section id="pricing" class="section">
-    <h2 class="text-2xl font-serif font-semibold text-rosegold mb-6">Pricing</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <div class="card">
-        <h3 class="text-lg font-semibold">Notary</h3>
-        <ul class="mt-4 space-y-2 text-charcoal/85">
-          <li>General Notarial Acts: <span class="font-semibold text-charcoal">$10 per seal</span> + travel</li>
-          <li>Loan Signings: Standard title company rates</li>
-          <li>Mobile Service: Distance‑based</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary mt-6">Book a Notary</a>
-      </div>
-
-      <div class="card">
-        <h3 class="text-lg font-semibold">Consulting</h3>
-        <ul class="mt-4 space-y-2 text-charcoal/85">
-          <li>Starter: <span class="font-semibold text-charcoal">$350</span></li>
-          <li>Standard: <span class="font-semibold text-charcoal">$650</span></li>
-          <li>Complete: <span class="font-semibold text-charcoal">$1,200</span></li>
-        </ul>
-        <a href="#contact" class="btn btn-outline mt-6">Explore Packages</a>
-      </div>
-    </div>
+  <!-- Pricing tables -->
+  <section class="section card" id="notary-pricing">
+    <h3>Notary Pricing</h3>
+    <table>
+      <thead><tr><th>Service</th><th>Rate</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>General notarial acts</td><td>$10 per seal</td><td>+ travel fee based on distance</td></tr>
+        <tr><td>Loan signings</td><td>Title company rates</td><td>Purchase, Refi, HELOC, Seller/Buyer</td></tr>
+        <tr><td>Mobile service</td><td>Distance‑based</td><td>Flexible scheduling</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Ask about after‑hours or rush availability.</div>
   </section>
 
-  <div class="divider"></div>
+  <section class="section card" id="consulting-pricing">
+    <h3>Consulting Packages</h3>
+    <table>
+      <thead><tr><th>Package</th><th>Price</th><th>Includes</th></tr></thead>
+      <tbody>
+        <tr><td>Starter</td><td>$350</td><td>Discovery, checklist, EIN support</td></tr>
+        <tr><td>Standard</td><td>$650</td><td>Starter + filings guidance, draft docs</td></tr>
+        <tr><td>Complete</td><td>$1,200</td><td>Full roadmap, templates, review support</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Custom scopes available for established orgs — request a consult.</div>
+  </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
-    <h2 class="text-2xl font-serif font-semibold text-rosegold mb-6">Contact</h2>
-    <div class="card">
-      <form class="grid grid-cols-1 gap-4" onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.');">
-        <input class="rounded-2xl border border-black/10 bg-ivory px-4 py-3 placeholder-black/40" placeholder="Name" required>
-        <input class="rounded-2xl border border-black/10 bg-ivory px-4 py-3 placeholder-black/40" placeholder="Email" type="email" required>
-        <select class="rounded-2xl border border-black/10 bg-ivory px-4 py-3">
+  <section class="section card" id="contact">
+    <h3>Contact</h3>
+    <div class="grid">
+      <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.');">
+        <input class="input" placeholder="Name" required>
+        <input class="input" placeholder="Email" type="email" required>
+        <select class="input">
           <option>Service Needed</option>
           <option>Notary – General</option>
           <option>Notary – Loan Signing</option>
           <option>Consulting – Nonprofit</option>
           <option>Consulting – Business</option>
         </select>
-        <textarea class="rounded-2xl border border-black/10 bg-ivory px-4 py-3 h-28 placeholder-black/40" placeholder="How can we help?"></textarea>
+        <textarea class="input" placeholder="How can we help?"></textarea>
         <button class="btn btn-primary" type="submit">Send Message</button>
       </form>
-
-      <div class="mt-8 grid gap-1 text-sm text-charcoal/80">
-        <div>📞 (210) 580‑6594</div>
-        <div>📍 San Antonio • Seguin • Nearby Areas</div>
-        <div>✉️ signings@polishedpen.com • info@whitneysway.com</div>
+      <div>
+        <p><strong>Phone:</strong> (210) 580‑6594</p>
+        <p><strong>Email:</strong> signings@polishedpen.com • info@whitneysway.com</p>
+        <p><strong>Service Area:</strong> San Antonio • Seguin • Nearby Areas</p>
       </div>
     </div>
   </section>
 
-  <footer class="container-ww py-10 text-center text-xs text-charcoal/60">
-    <div class="font-semibold mb-2">Whitney’s Way Consulting • The Polished Pen Notary Services</div>
-    <div>© 2025 Whitney Jenkins. All rights reserved.</div>
-  </footer>
-
+  <p class="footer">© 2025 Whitney’s Way Consulting • The Polished Pen Notary Services — All rights reserved.</p>
+</div>
 </body>
 </html>
-
